@@ -30,6 +30,7 @@ app.get('/api/movies', async (req, res) => {
     const data = await response.json();
     
     const movieData = data.results.map(movie => ({
+      image: movie.image,
       title: movie.title,
       genre: movie.genre_ids,
       overview: movie.overview,
